@@ -37,7 +37,7 @@
         justify-content: space-between;
         background:
           linear-gradient(180deg, rgba(8, 24, 37, 0.2) 0%, rgba(7, 23, 35, 0.65) 68%, rgba(7, 23, 35, 0.9) 100%),
-          url("https://github.com/user-attachments/assets/562fe934-0c97-4821-ba9f-1157183b6b0c")
+          url("https://github.com/user-attachments/assets/7769fdc0-76ed-46d7-a3c9-88f3aa5c1b66")
             center top / cover no-repeat;
       }
 
@@ -80,32 +80,9 @@
         margin-left: 14px;
       }
 
-      .menu span,
-      .status span {
+      .menu span {
         font-size: clamp(0.95rem, 1.2vw, 1.12rem);
         color: #e8f1ff;
-      }
-
-      .status {
-        min-width: 265px;
-        padding: 18px 26px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-      }
-
-      .pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .count {
-        border: 1px solid rgba(192, 220, 245, 0.4);
-        border-radius: 4px;
-        font-size: 0.8rem;
-        padding: 0 6px;
       }
 
       .headline {
@@ -146,9 +123,17 @@
 
       .meta {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
+        gap: clamp(20px, 4vw, 52px);
         font-size: clamp(0.95rem, 1.2vw, 1.2rem);
+      }
+
+      .meta span,
+      .cta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
       }
 
       @media (max-width: 1080px) {
@@ -160,11 +145,6 @@
         .nav {
           min-width: 0;
           flex-wrap: wrap;
-        }
-
-        .status {
-          justify-content: flex-start;
-          min-width: 0;
         }
 
         .bottom {
@@ -182,14 +162,8 @@
             <div class="menu">
               <span>About</span>
               <span>Features</span>
-              <span>Plans</span>
-              <span>☰</span>
             </div>
           </nav>
-          <div class="status glass" aria-label="Quick actions">
-            <span class="pill">Favorite <span class="count">1</span></span>
-            <span class="pill">Cart <span class="count">0</span></span>
-          </div>
         </header>
 
         <section class="headline">
@@ -201,11 +175,10 @@
             The social app that matches your vibe and helps you make plans for today, not someday.
           </p>
           <div class="meta glass">
-            <span>Local-first plans</span>
-            <span>•••</span>
-            <span>Verified people</span>
+            <span>📍 Local-first plans</span>
+            <span>✅ Verified people</span>
           </div>
-          <div class="cta glass">Get early access</div>
+          <div class="cta glass"><span>✉️ Get early access</span></div>
         </footer>
       </main>
     </div>
