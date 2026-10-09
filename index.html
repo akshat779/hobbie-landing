@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hobbie — Spontaneous activity matching</title>
+    <style>
+      :root {
+        --bg: #090b10;
+        --surface: #11141b;
+        --surface-2: #151a23;
+        --text: #f3f5f9;
+        --muted: #a0abc0;
+        --border: #232938;
+        --accent: #3b82f6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: radial-gradient(circle at top, #11172a 0%, var(--bg) 42%);
+        color: var(--text);
+        line-height: 1.55;
+      }
+
+      .page {
+        width: min(1100px, 92vw);
+        margin: 0 auto;
+        padding: 32px 0 64px;
+      }
+
+      .header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 8px 0 24px;
+      }
+
+      .brand {
+        font-size: clamp(1.55rem, 2vw, 1.9rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .badge {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #d8e7ff;
+        border: 1px solid #2b5bb3;
+        background: rgba(59, 130, 246, 0.12);
+        border-radius: 999px;
+        padding: 6px 10px;
+      }
+
+      .hero {
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: clamp(28px, 5vw, 52px);
+        background: linear-gradient(170deg, rgba(59, 130, 246, 0.08), transparent 35%), var(--surface);
+        margin-bottom: 22px;
+      }
+
+      .hero h1 {
+        margin: 0;
+        font-size: clamp(1.9rem, 4vw, 3rem);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+        max-width: 18ch;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+      }
+
+      .card,
+      .callout {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--surface);
+        padding: 20px;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 1.08rem;
+        letter-spacing: -0.01em;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .callout {
+        margin-top: 16px;
+        background: linear-gradient(180deg, rgba(59, 130, 246, 0.14), rgba(59, 130, 246, 0.04)), var(--surface-2);
+        border-color: #24457f;
+      }
+
+      .callout p {
+        color: #d6e4fb;
+      }
+
+      .accent {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <div class="brand">Hobbie</div>
+        <span class="badge">MVP Pipeline</span>
+      </header>
+
+      <section class="hero" aria-label="Hero tagline">
+        <h1>Spontaneous activity matching for urban professionals.</h1>
+      </section>
+
+      <section class="grid" aria-label="Problem and solution">
+        <article class="card">
+          <h2>The Problem</h2>
+          <p>
+            Urban professionals live near thousands of potential activity partners but still fail to coordinate in real
+            time. Dating apps introduce social friction and performative pressure, while async group platforms create
+            slow, cluttered planning threads that break spontaneous momentum.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>The Solution</h2>
+          <p>
+            Hobbie uses an <span class="accent">ephemeral, intent-driven matching engine</span> built around what you
+            want to do right now. Rooms are strict <span class="accent">2-4 hour TTL</span>, location discovery uses
+            coarse geohashing with fuzzed coordinates, and interest notifications enforce
+            <span class="accent">k-anonymity floors</span> to preserve privacy at low density.
+          </p>
+        </article>
+      </section>
+
+      <aside class="callout" aria-label="Trust and safety">
+        <h2>Trust &amp; Safety</h2>
+        <p>
+          Participation requires symmetric face-scan verification for hosts and joiners, producing visible trust
+          badges before engagement. A rolling-average trust score model (not a raw cumulative report counter) is used
+          to prevent coordinated false-reporting loops from unfairly triggering punitive outcomes.
+        </p>
+      </aside>
+    </main>
+  </body>
+</html>
